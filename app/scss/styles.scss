@@ -1,0 +1,79 @@
+@import "../css/normalize.css";
+@import "_settings";
+
+
+
+// общие классы
+.clearfix:before, .clearfix:after, .header, .menu__item, .navline, .menu, .container:before, .container:after, .form-group:before, .form-group:after, .box:before, .box:after, .container-big:before, .container-big:after {
+  display: table;
+  content: " "; }
+
+.clearfix:after, .container:after, .header, .menu__item, .navline, .menu, .form-group:after,  .box:after, .container-big:after {
+  clear: both; }
+
+html, body{
+	height: 100%;
+	width: 100%;
+	font-family: 'elektra_light_pro';
+	color: $font-color;
+}
+
+a{
+	text-decoration: underline;
+	color: $light-blue;
+	cursor: pointer;
+}
+
+a:hover{
+	color: $link-hover;
+}
+
+li{
+	list-style: none;
+}
+
+.container{
+	width: 1000px;
+	margin: auto;
+}
+
+.horizontal{
+	.menu__item{
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+
+// header
+.b-page__header{
+	box-size: border-box;
+	width: 100%;
+	height: 120px;
+	background: $header-background;
+	.b-header__inner{
+		box-size: border-box;
+		height: 100%;
+		padding-top: 25px;
+	}
+}
+
+.phone--big{
+	text-decoration: none;
+	.code{
+		vertical-align: top;
+	}
+	.number{
+		font-size: 1.7em;
+		color:#666;
+	}
+}

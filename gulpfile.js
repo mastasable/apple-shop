@@ -14,7 +14,7 @@ gulp.task('browser-sync', function() {
 
 
 gulp.task('styles', function () {
-  gulp.src('./app/scss/style.scss')
+  gulp.src('./app/scss/styles.scss')
     .pipe($.sass())
     .pipe($.autoprefixer('last 15 versions'))
     .pipe($.minifyCss())
@@ -38,6 +38,6 @@ gulp.task('html', function(){
 gulp.task('default', ['styles', 'compress', 'html']);
 
 gulp.task('serve', ['styles', 'browser-sync'], function  () {
-	gulp.watch('./app.scss/*.scss', ['styles']);
+	gulp.watch('./app/scss/*.scss', ['styles']);
 	gulp.watch('./app/*.html', ['html']);
 });
