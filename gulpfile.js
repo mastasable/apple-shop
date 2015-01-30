@@ -21,11 +21,12 @@ gulp.task('styles', function () {
     .pipe($.rename('styles.min.css'))
     .pipe(gulp.dest('app/css'))
     .pipe(reload({stream:true}));
+});
 
 gulp.task('compress', function() {
   gulp.src('./app/scripts/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/scripts'))
+    .pipe($.uglify())
+    .pipe(gulp.dest('./dist/scripts'));
 });
 
 
@@ -36,7 +37,7 @@ gulp.task('html', function(){
 
 gulp.task('default', ['styles', 'compress', 'html']);
 
-gulp.task('default', ['styles', 'browser-sync'], function  () {
-	gulp.watch("scss/*.scss", ['styles']);
+gulp.task('serve', ['styles', 'browser-sync'], function  () {
+	gulp.watch('./app.scss/*.scss', ['styles']);
 	gulp.watch('./app/*.html', ['html']);
 });
