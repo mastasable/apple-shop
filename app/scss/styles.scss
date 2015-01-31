@@ -28,6 +28,11 @@ a:hover{
 	color: $link-hover;
 }
 
+ul, li{
+	padding: 0;
+	margin: 0;
+}
+
 li{
 	list-style: none;
 }
@@ -37,11 +42,13 @@ li{
 	margin: auto;
 }
 
+.menu{
+	overflow: hidden;
+}
+
 .horizontal{
 	.menu__item{
 		display: inline-block;
-		padding: 0;
-		margin: 0;
 	}
 }
 
@@ -60,6 +67,7 @@ li{
 	width: 100%;
 	height: 120px;
 	background: $header-background;
+	margin-bottom: -26px;
 	.b-header__inner{
 		box-size: border-box;
 		height: 100%;
@@ -77,3 +85,67 @@ li{
 		color:#666;
 	}
 }
+
+//top menu
+.b-top-menu{
+	width: 100%;
+	display: block;
+}
+
+.b-top-menu__list{
+	margin: 0;
+	overflow: hidden;
+}
+
+.top-menu__item{
+	margin-left: 14px;
+}
+
+.top-menu__link{
+	background: $menu-background;
+	padding: 16px 11px;
+	float: left;
+	text-decoration: none;
+	color: $font-color;
+	font-size: .9em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+	position: relative;
+}
+
+.top-menu__link:hover{
+	background: $menu-hover;
+}
+
+.top-menu__link::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	border-width: 25px 0 25px 17px;
+	border-style: solid;
+	border-color: $menu-background transparent;
+	left: -16px;
+}
+
+.top-menu__link:hover::before{
+	border-color: $menu-hover transparent;
+}
+
+.top-menu__link::after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -24px;
+	border-top: 24px solid transparent;
+	border-bottom: 24px solid transparent;
+	border-left: 17px solid $menu-background;
+	right: -16px;
+}
+
+.top-menu__link:hover::after{
+	border-left-color: $menu-hover;
+}
+
+
+
+
