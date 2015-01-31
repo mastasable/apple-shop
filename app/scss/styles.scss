@@ -3,7 +3,9 @@
 
 
 
-// общие классы
+/*--------------------ОБЩИЕ КЛАССЫ------------------*/
+
+
 .clearfix:before, .clearfix:after, .header, .menu__item, .navline, .menu, .container:before, .container:after, .form-group:before, .form-group:after, .box:before, .box:after, .container-big:before, .container-big:after {
   display: table;
   content: " "; }
@@ -61,7 +63,9 @@ li{
 }
 
 
-// header
+ /*   ------------------header---------------------*/
+
+
 .b-page__header{
 	box-size: border-box;
 	width: 100%;
@@ -86,7 +90,13 @@ li{
 	}
 }
 
-//top menu
+ /*   ------------------header---------------------*/
+
+
+
+/*-----------------------B-PAGE------------------------*/
+
+/*-----------------------Top Menu--------------------*/
 .b-top-menu{
 	width: 100%;
 	display: block;
@@ -114,6 +124,7 @@ li{
 
 .top-menu__link:hover{
 	background: $menu-hover;
+	color: $font-color;
 }
 
 .top-menu__link::before{
@@ -145,6 +156,31 @@ li{
 .top-menu__link:hover::after{
 	border-left-color: $menu-hover;
 }
+
+.active, .active:hover{
+		color: #f7f7f7;
+		background: $light-blue;
+}
+
+.active::after, .active:hover::after{
+	border-left-color: $light-blue;
+}
+
+.active::before, .active:hover::before{
+	border-color: $light-blue transparent;
+}
+
+.active:hover{
+	border-left-color: $light-blue;
+}
+
+
+/*------------------CATALOG-----------------*/
+
+
+
+
+
 
 
 
