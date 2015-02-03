@@ -168,6 +168,10 @@ li{
 
 /*------------------Catalog header----------*/
 
+.b-catalog__header{
+	padding-bottom: 60px;
+}
+
 .crumbs__item{
 	display: inline-block;
 	margin-left: 10px;
@@ -235,17 +239,20 @@ li{
 /*------------Sidebar-------------------*/
 
 .b-sidebar{
-	width: 330px;
+	width: 230px;
+	.menu{
+		width: 100%;
+	}
 }
 
-.sidebar-menu__item{
+.sidebar-menu__item, .submenu__item{
 	width: 100%;
 	line-height: 25px;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #dae1e8;
 }
 
-.sidebar-menu__link{
+.sidebar-menu__link, .submenu__link{
 	display: block;
 	background: $menu-background;
 	padding-left: 20px;
@@ -253,18 +260,137 @@ li{
 	text-decoration: none;
 }
 
-.sidebar-menu__link:hover{
+.submenu{
+	display: none;
+}
+
+.submenu__link:before{
+	content: ">";
+	margin-right: 10px;
+}
+
+
+.sidebar-menu__link:hover, .submenu__link:hover{
 	background: #dae1e8;
 	color: $font-color;
 }
 
-.sidebar-menu__item:last-child{
+.sidebar-menu__item:last-child, .submenu__item:last-child{
 	border-bottom: none;
 }
 
 
+.b-products{
+	width: 740px;
+}
+
+.b-box{
+	display: block;
+	margin: auto;
+	margin-bottom: 20px;
+	height: 130px;
+	padding-top: 30px;
+	border-radius: 2px;
+}
+
+.b-box:hover{
+	cursor: pointer;
+	-webkit-box-shadow: 2px 2px 16px 2px rgba(0,0,0,0.34);
+	-moz-box-shadow: 2px 2px 16px 2px rgba(0,0,0,0.34);
+	box-shadow: 2px 2px 16px 2px rgba(0,0,0,0.34);
+}
 
 
+.b-box__pic{
+	padding-left: 30px;
+	width: 145px;
+	position: relative;
+	float: left;
+	display: inline-block;
+}
+
+.b-box__descr{
+	padding-left: 190px;
+	width: 595px;
+	position: relative;
+}
+
+.grid-visible{
+	display: none;
+}
+
+.b-about-shop{
+	width: 740px;
+}
+
+
+.b-page__footer{
+	background: url('../images/footer-bg.png') repeat;
+}
+
+.b-footer__menu{
+	display: inline-block;
+	margin: 62px 35px;
+	.menu__header, .footer-menu__link{
+		color: white;
+	}
+	.footer-menu__item{
+		line-height: 30px;
+	}
+}
+
+.b-footer__menu:last-child{
+	margin-right: 0;
+}
+
+
+.b-footer__social-block{
+	display: inline-block;
+	margin-top: 72px;
+	.store__link{
+		padding-left: 5px;
+	}
+	.store__link:first-child{
+		padding-left: 0;
+	}
+}
+
+.b-store-block{
+	margin-bottom: 20px;
+}
+
+.b-footer__iner{
+	.b-logo{
+		margin-top: 100px;
+		margin-right: 75px;
+	}
+}
+
+.social-cons__link{
+	margin-left: 5px;
+	display: inline-block;
+	width: 43px;
+	height: 42px;
+	background: url('../images/social-ico.png');
+}
+
+
+.social-cons__link:first-child{
+	margin-left: 0;
+}
+
+
+.vk{
+	background-position: 2px 2px;
+}
+
+.fb{
+	background-position: 95px 2px;
+}
+
+.tw{
+	background-position: 45px 2px;
+}
 
 
 
