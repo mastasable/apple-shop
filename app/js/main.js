@@ -1,4 +1,7 @@
 $(document).ready(function  () {
+	
+	//acordeon
+
 	$('.acordion-trigger').on('click', function  (e) {
 		e.preventDefault();
 
@@ -24,5 +27,24 @@ $(document).ready(function  () {
 				item.removeClass('active');
 				$this.removeClass('active');
 			}
+	});
+
+	// view-change
+
+	$('#showblock').on('change', function(){
+		var $this = $(this),
+			list = $('.b-products__body'),
+			view = $this.val(),
+			gridVisible=$('.grid-visible');
+
+		if (view === 'cell'){
+			list.addClass('b-products__body--vertical');
+			gridVisible.css('display', 'block');
+		}
+
+		if(view === 'lines'){
+			list.removeClass('b-products__body--vertical');
+			gridVisible.css('display', 'none');
+		}
 	});
 });

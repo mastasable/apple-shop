@@ -280,6 +280,7 @@ li{
 }
 
 
+
 .b-products{
 	width: 740px;
 }
@@ -312,12 +313,30 @@ li{
 .b-box__descr{
 	padding-left: 190px;
 	width: 595px;
-	position: relative;
 }
 
-.grid-visible{
-	display: none;
+.b-products__body--vertical{
+	.b-box{
+		text-align: center;
+		display: inline-block;
+		width: 240px;
+		height: 260px;
+	}
+	.b-box__pic{
+		padding: 0;
+		float: none;
+	}
+	.b-box__descr{
+		padding: 0;
+		width: 92%;
+		margin: auto;
+	}
+	.b-box:after{
+		content: " ";
+		clear: both;
+	}
 }
+
 
 .b-about-shop{
 	width: 740px;
