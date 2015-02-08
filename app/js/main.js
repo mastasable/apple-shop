@@ -31,7 +31,7 @@ $(document).ready(function  () {
 
 	// view-change
 
-	$('#showblock').on('change', function(){
+	$('.select').on('change', function(){
 		var $this = $(this),
 			list = $('.b-products__body'),
 			view = $this.val(),
