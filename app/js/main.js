@@ -48,18 +48,19 @@ $(document).ready(function  () {
 		}
 	});
 
-	//up-btn
+		//up-btn
 
 	$(window).scroll(function(){
-		if $(this).scrollTop()> 0{
-			$('.up-button').fadeIn();
+		var $this = $(this);
+		if ($this.scrollTop()> 0){
+			$('.up-button').stop(true, true).fadeIn();
 		} else {
-			$('.up-button').fadeOut();
+			$('.up-button').stop(true, true).fadeOut();
 		}
 	});
 
-	$('.up-button').clck(function  () {
-		$('body, html').animate({
+	$('.up-button').click(function  () {
+		$('body, html').stop(true, true).animate({
 			scrollTop:0
 		}, 400);
 		return false;
