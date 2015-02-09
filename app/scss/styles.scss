@@ -429,3 +429,15 @@ li{
 .active:hover{
 	border-left-color: $light-blue;
 }
+
+.up-button{
+	color: white;
+	border: none;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	background:transparent url('../images/up-btn.png') left top no-repeat;
+	cursor: pointer;
+	width: 75px;
+	height: 40px;
+}

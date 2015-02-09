@@ -47,4 +47,21 @@ $(document).ready(function  () {
 			gridVisible.css('display', 'none');
 		}
 	});
+
+	//up-btn
+
+	$(window).scroll(function(){
+		if $(this).scrollTop()> 0{
+			$('.up-button').fadeIn();
+		} else {
+			$('.up-button').fadeOut();
+		}
+	});
+
+	$('.up-button').clck(function  () {
+		$('body, html').animate({
+			scrollTop:0
+		}, 400);
+		return false;
+	});
 });
